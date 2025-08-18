@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stefano La Terra"
+		]
+	},
+	
+	"wikitablefilter": "Funzione avanzata di filtraggio tabelle",
+	"wikitablefilter-desc": "Fornisce un insieme di filtri configurabili per le tabelle in mediawiki",
+	"wikitablefilter-search": "Cerca..",
+	"wikitablefilter-clear": "Azzera",
+	"wikitablefilter-filter": "Filtra...",
+	"wikitablefilter-1filter": "1 filtro",
+	"wikitablefilter-filters": " filtri"
+}

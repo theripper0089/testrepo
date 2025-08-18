@@ -1,0 +1,65 @@
+{
+  "name": "WikiTableFilter",
+  "version": "0.9.10",
+  "author": [
+    "Max Guglielmi",
+    "Stefano La Terra",
+    "Marco Lazzaro"
+  ],
+  "url": "https://www.mediawiki.org/wiki/Extension:WikiTableFilter",
+  "descriptionmsg": "wikitablefilter-desc",
+  "license-name": "GPL-2.0-or-later",
+  "type": "other",
+
+  "AutoloadClasses": {
+    "MediaWiki\\Extension\\WikiTableFilter\\Hooks": "includes/Hooks.php"
+  },
+
+  "MessagesDirs": {
+    "WikiTableFilter": [
+      "i18n"
+    ]
+  },
+
+  "ResourceModules": {
+    "ext.WikiTableFilter": {
+      "targets": ["desktop", "mobile"],
+      "scripts": [
+        "js/bootstrap.bundle.min.js",
+        "js/bootstrap-multiselect.js",
+        "js/tablefilter.js",
+        "js/tf-1-2aa33b10e0e549020c12.js",
+        "js/WikiTableFilter.js"
+      ],
+      "styles": [
+        "css/tablefilter.css",
+        "css/bootstrap-multiselect.css",
+        "css/bootstrap.min.css"
+      ],
+      "messages": [
+        "wikitablefilter-desc",
+        "wikitablefilter-search",
+        "wikitablefilter-clear",
+        "wikitablefilter-filter",
+        "wikitablefilter-1filter",
+        "wikitablefilter-filters"
+      ],
+      "dependencies": [
+        "jquery",
+        "mediawiki.jqueryMsg",
+        "mediawiki.util"
+      ],
+      "localBasePath": "resources",
+      "remoteExtPath": "WikiTableFilter/resources"
+    }
+  },
+
+  "HookHandlers": {
+    "main": { "class": "MediaWiki\\Extension\\WikiTableFilter\\Hooks" }
+  },
+  "Hooks": {
+    "BeforePageDisplay": "main"
+  },
+
+  "manifest_version": 2
+}
